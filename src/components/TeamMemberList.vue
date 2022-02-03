@@ -1,16 +1,16 @@
 <template>
   <div>
-    <b-card>
+    <b-card >
       <ul class="list-unstyled" v-for="member in members" :key="member.id">
-        <b-media tag="li">
+        <b-media tag="li" class="border-bottom  border-secondary">
           <template #aside>
-            <b-img
+            <b-avatar
               width="64"
               alt="placeholder"
               src="https://picsum.photos/125/125/?image=58"
-            ></b-img>
+            ></b-avatar>
 
-            <div cl>
+            <div class="member-info">
 
           <h5 class="mt-0 mb-1">{{member.name }}</h5>
           <p class="mb-0">
@@ -46,4 +46,8 @@ export default class TeamMemberList extends Vue {}
 </script>
 
 <style scoped lang="scss">
+.member-info{
+margin-left: 12px;
+text-align: left;
+}
 </style>
