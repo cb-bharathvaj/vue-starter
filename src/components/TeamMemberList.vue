@@ -7,8 +7,11 @@
             <b-img
               width="64"
               alt="placeholder"
+              src="https://picsum.photos/125/125/?image=58"
             ></b-img>
-          </template>
+
+            <div cl>
+
           <h5 class="mt-0 mb-1">{{member.name }}</h5>
           <p class="mb-0">
             {{ member.email }}
@@ -16,6 +19,10 @@
           <p class="mb-0">
             {{ member.role }}
           </p>
+          </div>
+
+          </template>
+
         </b-media>
       </ul>
     </b-card>
@@ -23,17 +30,17 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
 @Component({
-  name: "TeamMemberList",
+  name: 'TeamMemberList',
   props: {
     members: {
       type: Array,
-      default: () => []
-    }
-  }
+      default: () => [],
+    },
+  },
 })
 export default class TeamMemberList extends Vue {}
 </script>
