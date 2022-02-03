@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VuexPersist from 'vuex-persist';
+import { TeamMember, MemberRole } from '@/types';
 
 const vuexPersist = new VuexPersist({
   key: 'workshop',
@@ -14,11 +15,11 @@ export default new Vuex.Store({
     members: [
       {
         id: 1,
-        name: 'bharath',
+        name: 'John Doe',
         image: '',
-        email: 'asdas@asasasa.com'
+        email: 'john.doe@chargebee.com'
       }
-    ] as any[]
+    ] as TeamMember[]
   },
   mutations: {
     addMember(state, member: any) {
@@ -30,7 +31,9 @@ export default new Vuex.Store({
       return state.members;
     }
   },
-  actions: {},
+  actions: {
+
+  },
   modules: {},
   plugins: [vuexPersist.plugin],
 });

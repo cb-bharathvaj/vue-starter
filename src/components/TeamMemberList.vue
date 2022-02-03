@@ -5,8 +5,6 @@
         <b-media tag="li">
           <template #aside>
             <b-img
-              blank
-              blank-color="#abc"
               width="64"
               alt="placeholder"
             ></b-img>
