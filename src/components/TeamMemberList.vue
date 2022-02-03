@@ -2,7 +2,7 @@
   <div>
     <b-card >
       <ul class="list-unstyled" v-for="member in members" :key="member.id">
-        <b-media tag="li" class="border-bottom  border-secondary">
+        <b-media tag="li" :class="member.id < members.length -1 && 'border-bottom  border-secondary'">
           <template #aside>
             <b-avatar
               width="64"
@@ -47,7 +47,9 @@ export default class TeamMemberList extends Vue {}
 
 <style scoped lang="scss">
 .member-info{
-margin-left: 12px;
+margin: 12px;
 text-align: left;
+margin-top: 4px;
+
 }
 </style>
