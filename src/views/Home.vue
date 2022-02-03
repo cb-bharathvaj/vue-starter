@@ -3,7 +3,7 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
     <b-container>
-      <SampleTeamMemberList />
+      <SampleTeamMemberList :members="members" />
     </b-container>
   </div>
 </template>
@@ -19,5 +19,10 @@ import SampleTeamMemberList from '@/components/TeamMemberList.vue';
     SampleTeamMemberList,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+
+  get members() {
+    return this.$store.getters.listMembers;
+  }
+}
 </script>
