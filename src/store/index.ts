@@ -12,14 +12,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    members: [
-      {
-        id: 1,
-        name: 'John Doe',
-        image: '',
-        email: 'john.doe@chargebee.com'
-      }
-    ] as TeamMember[]
+    members: Array.from({ length: 5 }).map((_, id) => ({
+      id,
+      name: 'John Doe ' + id  ,
+      email: 'john.doe@chargebee.com' + id
+    })) as TeamMember[]
   },
   mutations: {
     addMember(state, member: any) {
