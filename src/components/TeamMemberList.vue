@@ -42,7 +42,9 @@ import Component from 'vue-class-component';
     },
   },
 })
-export default class TeamMemberList extends Vue {}
+export default class TeamMemberList extends Vue {
+
+}
 </script>
 
 <style scoped lang="scss">
